@@ -1,0 +1,55 @@
+
+import java.util.Scanner;
+
+public class Exercicio_Nota_Aluno {
+
+    public float nota1;
+    public float nota2;
+    public float nota3;
+    public float QuantidadeDeFaltas;
+    public String nome;
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite o nome do Aluno:");
+        String nome = in.next();
+
+        System.out.println("Digite a nota 1 do(a) " + nome + ":");
+        float nota1 = in.nextFloat();
+
+        System.out.println("Digite a nota 2 do(a) " + nome + ":");
+        float nota2 = in.nextFloat();
+
+        System.out.println("Digite a nota 3 do(a) " + nome + ":");
+        float nota3 = in.nextFloat();
+
+        System.out.println("Digite a quantidade de faltas do(a) " + nome + " (em dias):");
+        float QuantidadeDeFaltas = in.nextFloat();
+
+                float Media = (nota1 + nota2 + nota3)/3;
+
+                float Faltas = (QuantidadeDeFaltas/68);
+
+        if (Media >= 7 && Faltas <= 0.25) {
+            System.out.println("Aprovado:" + Media);
+        }
+
+        if (Media <= 7 && Faltas > 0.25) {
+            System.out.println("Reprovado por falta e nota");
+
+        }
+
+        if (Media >= 7 && Faltas > 0.25) {
+            System.out.println("Reprovado por falta");
+
+        }
+
+        if (Media < 7 && Faltas < 0.25) {
+            System.out.println("Reprovado por nota: " + Media);
+
+        }
+
+    }
+}

@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Exercicio_Calculadora {
+
+    public float n1;
+    public float n2;
+
+    public static void main(String[] args) {
+        System.out.println("---------------SOMA / SUBTRAÇÃO / MULTIPLICAÇÃO / DIVISÃO ---------------");
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite um número:");
+        float n1 = in.nextFloat();
+
+        System.out.println("Digite um número:");
+        float n2 = in.nextFloat();
+
+
+        float soma = n1 + n2;
+        float subtracao = n1 - n2;
+        float divisao = n1/n2;
+        float multiplicacao = n1*n2;
+
+        System.out.println("---------------SOMA DOS NÚMEROS---------------");
+
+        System.out.println("Soma: " + soma);
+
+        System.out.println("---------------SUBTRAÇÃO DOS NÚMEROS--------------");
+
+        System.out.println("Subtração: " + subtracao);
+
+        System.out.println("---------------DIVISÃO DOS NÚMEROS --------------");
+
+        System.out.println("Divisão: " + divisao);
+
+        System.out.println("---------------MULTIPLICAÇÃO DOS NÚMEROS --------------");
+
+        System.out.println("Multiplicação " + multiplicacao);
+    }
+
+}
